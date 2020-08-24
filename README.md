@@ -23,7 +23,7 @@ Answer the first question "Login using Facebook?" with 'y' for yes and 'n' for N
 1. Insert your Instagram email and password. <br>
 Again, don't worry I will not save the credentials anywhere, can see the source code yourself.
 
-1. Insert THE Instagram profile username that you want to bomb.
+1. Insert The Instagram profile username that you want to bomb.
 
 1. Chrome window will open and let it be, you also can let it run on the background.
 
