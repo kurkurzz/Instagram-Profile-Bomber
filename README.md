@@ -2,7 +2,7 @@
 Bomb any profile you like the easiest way.
 
 ## Download Link
-https://github.com/kurkurzz/Instagram-Profile-Bomber/raw/master/dist/Instagram%20Profile%20Bomber.exe
+https://github.com/kurkurzz/Instagram-Profile-Bomber/raw/master/dist/IG%20Profile%20Bomber.exe
 
 ## How To Use:
 1. Run the application 'Instagram Profile Bomber'. <br>
