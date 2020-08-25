@@ -44,5 +44,5 @@ Happy Bombing!
 <br>
 <br>
 ### credit<br>
--Icons made by https://www.flaticon.com/authors/freepik
--Icons made by https://www.flaticon.com/authors/kiranshastry
+- Icons made by https://www.flaticon.com/authors/freepik
+- Icons made by https://www.flaticon.com/authors/kiranshastry
