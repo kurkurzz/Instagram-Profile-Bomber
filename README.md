@@ -34,10 +34,15 @@ Again, don't worry I will not save the credentials anywhere, can see the source 
 
 1. The browser must be open full screen all the time during the process.
 
-1. It can only handle profile with 40 post maximum. If profile with posts over 40, it will just like the latest 40 post.
+1. It can only handle profile with 40 post maximum. If profile with posts over 40, it will just likes the latest 40 post. <br>
+( Will be fixed soon. )
 
 As far as I tried, there will be no risk of banning or temporary banning as long as you are not using it excessively.
 <br>
 <br>
 Happy Bombing!
-
+<br>
+<br>
+### credit<br>
+-Icons made by https://www.flaticon.com/authors/freepik
+-Icons made by https://www.flaticon.com/authors/kiranshastry
