@@ -18,7 +18,7 @@ If antivirus warns you about this 'risky' app, just whitelist the application. D
         ![runanyway](https://user-images.githubusercontent.com/64152220/91061765-c1be2600-e65e-11ea-8164-31ad413481fe.jpg)
 
 1. Terminal will appear. <br>
-Answer the first question "Login using Facebook?" with 'y' for yes and 'n' for No.
+Answer the first question "Login using Facebook?" with 'y' for Yes and 'n' for No.
 
 1. Insert your Instagram email and password. <br>
 Again, don't worry I will not save the credentials anywhere, can see the source code yourself.
@@ -43,6 +43,7 @@ As far as I tried, there will be no risk of banning or temporary banning as long
 Happy Bombing!
 <br>
 <br>
-### credit<br>
+
+## Credit<br>
 - Icons made by https://www.flaticon.com/authors/freepik
 - Icons made by https://www.flaticon.com/authors/kiranshastry

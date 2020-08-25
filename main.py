@@ -24,9 +24,8 @@ USERSEARCHBOX_XPath = '/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input
 PICKFIRSTUSER_XPath = '/html/body/div[1]/section/nav/div[2]/div/div/div[2]/div[3]/div[2]/div/a[1]/div'
 INSTAGRID_XPath = '/html/body/div[1]/section/main/div/div[3]/article/div'
 IMAGEPOP_XPath = '/html/body/div[4]/div[3]/button/div'
-INSTAIMG_XPath = '/html/body/div[1]/section/main/div/div[3]/article/div/div/div[{}]/div[{}]'
 
-altINSTAIMG_XPath = '//*[@id="react-root"]/section/main/div/div[contains(@class," _2z6nI")]/article/div/div/div[{}]/div[{}]'
+INSTAIMG_XPath = '//*[@id="react-root"]/section/main/div/div[contains(@class," _2z6nI")]/article/div/div/div[{}]/div[{}]'
 POSTNUMBER_XPath = '//*[@id="react-root"]/section/main/div/header/section/ul/li[1]/span/span'
 LIKE_XPath = '/html/body/div[4]/div[2]/div/article/div[3]/section[1]/span[1]/button'
 
@@ -34,10 +33,10 @@ print('\nInstagram profile Bomber\n')
 print('Please make sure the chrome window is maximise at all time.')
 while(True):
     logInFacebooks = input("Login using Facebook?(y/n): ")
-    if logInFacebooks=='y' or logInFacebooks=='Y':
+    if  logInFacebooks.lower()=='y'::
         logInFacebook = True
         break
-    elif logInFacebooks=='n' or logInFacebooks=='N':
+    elif  logInFacebooks.lower()=='n'::
         logInFacebook = False
         break
     else:
@@ -47,6 +46,7 @@ password = input("Please enter the Instagram password: ")
 igusername = input("Please enter the the profile's username: ")
 succeedLogin = False
 
+#need to have this func to export to .exe
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
@@ -72,15 +72,12 @@ if logInFacebook:
         )
         element.send_keys(email)
         #fill in fb password
-        element = WebDriverWait(driver,10).until(
-        EC.presence_of_element_located((By.XPATH,FBPASSWORDFORM_XPath))
-        )
+        element = driver.find_element_by_xpath(FBPASSWORDFORM_XPath)
         element.send_keys(password)
         #click login 
-        element = WebDriverWait(driver,10).until(
-        EC.presence_of_element_located((By.XPATH,FBLOGINBUTTON_XPath))
-        )
+        element = driver.find_element_by_xpath(FBLOGINBUTTON_XPath)
         element.click()
+        #click not now
         element = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH,NOTNOW_XPath))
         )
@@ -92,20 +89,25 @@ if logInFacebook:
 else:
     try:
         print('-Loggin in with email and password')
+        #fill in email
         element = WebDriverWait(driver,10).until(
         EC.presence_of_element_located((By.XPATH,EMAIL_XPath))
         )
         element.send_keys(email)
+        #fill in password
         element = driver.find_element_by_xpath(PASSWORD_XPath)
         element.send_keys(password)
+        #click login
         element = driver.find_element_by_xpath(LOGINBUTTON_XPath)
         element.click()
+        #reject save login info
         element = WebDriverWait(driver,10).until(
         EC.presence_of_element_located((By.XPATH,REJECTLOGININFO_XPath))
         )
         element.click()
         succeedLogin = True
         print('-Succeed login with email and password.')   
+        #click not now
         element = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH,NOTNOW_XPath))
         )
@@ -115,17 +117,21 @@ else:
 
 if succeedLogin:
     try:       
+        #type in username in search box
         element = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH,USERSEARCHBOX_XPath))
         )
         element.send_keys(igusername)
+        #pick first name from list
         element = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH,PICKFIRSTUSER_XPath))
         )
         element.click()
+        #wait for profile load
         element = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH,INSTAGRID_XPath))
         )
+        #get post number
         element = driver.find_element_by_xpath(POSTNUMBER_XPath)
         postNumber = int(element.text)
         print('The profile contains {} posts'.format(postNumber))
@@ -133,12 +139,13 @@ if succeedLogin:
         isBreaked = False
         column = 0
         row = 0
+        #like posts process
         for row in range(1,int(totalRow)+1):
             if isBreaked:
                 break
             for column in range(1,4):
                 image = WebDriverWait(driver,10).until(
-                    EC.presence_of_element_located((By.XPATH,altINSTAIMG_XPath.format(row ,column)))
+                    EC.presence_of_element_located((By.XPATH,INSTAIMG_XPath.format(row ,column)))
                 )
                 # image.location_once_scrolled_into_view
                 image.click()
@@ -152,7 +159,7 @@ if succeedLogin:
                         likeButton.click()
                         print(' - Pressed Like')
                     else:
-                        print('')
+                        print()
                 except:
                     print(' - Problem liking')   
                 finally:     
@@ -163,12 +170,12 @@ if succeedLogin:
                         break   
         print('-Done bombing!')            
     except:
-        print('')
+        print()
         print('The program counter an error, please try again.')
     finally: 
         driver.quit()
 else:
     driver.quit()
-    print('')
+    print()
     print('Please try again by running the script again.')  
 
