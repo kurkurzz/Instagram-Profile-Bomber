@@ -4,7 +4,7 @@ Bomb any profile you like the easiest way.
 ## Download Link
 https://github.com/kurkurzz/Instagram-Profile-Bomber/raw/master/dist/IG%20Profile%20Bomber.exe
 
-## How To Use:
+## How To Use
 1. Run the application 'Instagram Profile Bomber'. <br>
 If antivirus warns you about this 'risky' app, just whitelist the application. Don't worry, there is no virus, can see the source code yourself.
 
