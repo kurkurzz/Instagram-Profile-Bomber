@@ -29,6 +29,13 @@ Again, don't worry I will not save the credentials anywhere, can see the source 
 
 1. DONE!
 
+## Recreate the .exe file
+1. Run command :
+    >$ pip install pyinstaller
+1. Go to project directory terminal, run command :
+    >$ pyinstaller ./main.py --onefile --add-binary "./drivers/chromedriver.exe;./drivers"
+1. The .exe file is in ```dist``` folder.
+
 ## Down side
 1. Cannot do on private profile that you are not followed yet. (obviously)
 
@@ -44,6 +51,6 @@ Happy Bombing!
 <br>
 <br>
 
-## Credit<br>
+## Credit
 - Icons made by https://www.flaticon.com/authors/freepik
 - Icons made by https://www.flaticon.com/authors/kiranshastry
