@@ -33,10 +33,10 @@ print('\nInstagram profile Bomber\n')
 print('Please make sure the chrome window is maximise at all time.')
 while(True):
     logInFacebooks = input("Login using Facebook?(y/n): ")
-    if  logInFacebooks.lower()=='y'::
+    if  logInFacebooks.lower()=='y':
         logInFacebook = True
         break
-    elif  logInFacebooks.lower()=='n'::
+    elif  logInFacebooks.lower()=='n':
         logInFacebook = False
         break
     else:

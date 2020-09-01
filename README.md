@@ -1,5 +1,5 @@
 # Instagram Profile Bomber
-Bomb any profile you like the easiest way.
+Bomb likes any profile you like the easiest way.
 
 ## Download Link
 https://github.com/kurkurzz/Instagram-Profile-Bomber/raw/master/dist/IG%20Profile%20Bomber.exe
